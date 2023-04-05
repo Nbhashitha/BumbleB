@@ -1,6 +1,8 @@
 package com.InventoryManagementSystem.Controller;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -52,6 +54,12 @@ public class Login extends HttpServlet {
 		else {
 			response.sendRedirect("http://localhost:8080/InventoryManagementSystem/jsp/LoginPage.jsp");
 			
+			String message = "Please enter valid Username and Password";
+			
+			request.setAttribute("message", message);
+			RequestDispatcher dispatcher = request.getRequestDispatcher("http://localhost:8080/InventoryManagementSystem/jsp/LoginPage.jsp");
+			dispatcher.forward(request, response);
+
 		}
 		
 	}

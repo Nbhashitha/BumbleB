@@ -20,6 +20,8 @@
 			<input type="password" id="password" name ="password" placeholder="Enter password" required>
 
 			<button type="submit" id="signin-btn">Sign In</button>
+			
+			<label for="password"><%= request.getAttribute("message") %></label>
 		</form>
 		<div class="signup-container">
 			<p>Don't have an account?</p>
