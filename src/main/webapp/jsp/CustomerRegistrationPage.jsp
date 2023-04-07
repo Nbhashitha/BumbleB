@@ -11,7 +11,7 @@
 
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 		<div class="container-fluid">
 			<a class="navbar-brand bold p-3" href="#"> <img
 				src="https://cdn-icons-png.flaticon.com/512/2331/2331966.png" alt=""
@@ -28,17 +28,15 @@
 				id="navbarNavDropdown">
 				<ul class="navbar-nav">
 					<li class="nav-item mx-2"><a class="nav-link"
-						aria-current="page" href="http://localhost:8080/InventoryManagementSystem/jsp/HomePage.jsp">Dashboard</a></li>
+						aria-current="page" href="http://localhost:8080/InventoryManagementSystem/jsp/HomePage.jsp">Home</a></li>
 					<li class="nav-item mx-2"><a class="nav-link active"
-						href="http://localhost:8084/InventoryManagementSystem/jsp/RegistrationPage.jsp">Customers</a>
+						href="http://localhost:8084/InventoryManagementSystem/jsp/CustomerRegistrationPage.jsp">User Registration</a>
 					</li>
 					<li class="nav-item mx-2"><a class="nav-link"
-						href="http://localhost:8084/InventoryManagementSystem/jsp/ProductCreation.jsp">Products</a>
-					</li>
-					<li class="nav-item mx-2"><a class="nav-link" href="#">Suppliers</a>
+						href="http://localhost:8084/InventoryManagementSystem/jsp/LoginPage.jsp">Sign In</a>
 					</li>
 					<div class="dropdown mx-2">
-						<a class="btn btn-secondary dropdown-toggle" href="#"
+						<a class="btn btn-light dropdown-toggle" href="#"
 							role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
 							aria-expanded="false"> Hi Navodya </a>
 
@@ -93,9 +91,7 @@
 					class="form-control" aria-labelledby="dropdownMenuButton"
 					name="role">
 					<option selected>Choose...</option>
-					<option value="admin">Admin</option>
-					<option value="customer">Customer</option>
-					<option value="supplier">Supplier</option>
+					<option value="customer">Customer</option>                
 				</select>
 			</div>
 		</div>

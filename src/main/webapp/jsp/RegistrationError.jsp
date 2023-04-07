@@ -27,9 +27,9 @@
 			<div class="collapse navbar-collapse d-flex justify-content-end"
 				id="navbarNavDropdown">
 				<ul class="navbar-nav">
-					<li class="nav-item mx-2"><a class="nav-link"
-						aria-current="page" href="http://localhost:8080/InventoryManagementSystem/jsp/HomePage.jsp">Dashboard</a></li>
 					<li class="nav-item mx-2"><a class="nav-link active"
+						aria-current="page" href="#">Dashboard</a></li>
+					<li class="nav-item mx-2"><a class="nav-link"
 						href="http://localhost:8084/InventoryManagementSystem/jsp/RegistrationPage.jsp">Customers</a>
 					</li>
 					<li class="nav-item mx-2"><a class="nav-link"
@@ -99,6 +99,15 @@
 				</select>
 			</div>
 		</div>
+
+		<div class="form-row row d-flex d-flex justify-content-center mt-5 ">
+			<div class="col-8">
+				<div class="alert alert-danger" role="alert">Age Restriction: You are not Eligible to buy products</div>
+			</div>
+		</div>
+
+
+
 		<div class="form-row row d-flex d-flex justify-content-center mt-5 ">
 			<div class="col-4">
 

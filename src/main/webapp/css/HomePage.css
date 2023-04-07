@@ -1,54 +1,15 @@
-* {
-  box-sizing: border-box;
+html, body {
+  height: 100%;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+.full-height {
+  height: 100%;
 }
 
-header {
-  background-color: #333;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+.bold{
+	font-weight: bold;
 }
 
-.logo img {
-  height: 50px;
-  margin-right: 10px;
+.lgfont{
+	font-size: 40px;
 }
-
-nav ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  margin-left: 20px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.content {
-  margin-top: 80px;
-  display: flex;
-}
-
-.sidebar {
-  width: 25%;
-  background-color: #f0f0f0;
-  padding: 20px;
-}
-

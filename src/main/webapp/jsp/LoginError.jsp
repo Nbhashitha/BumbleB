@@ -20,6 +20,7 @@
 			<input type="password" id="password" name ="password" placeholder="Enter password" required>
 
 			<button type="submit" id="signin-btn">Sign In</button>
+			<p>* Please enter correct User name and Password</p>
 		</form>
 		<div class="signup-container">
 			<p>Don't have an account?</p>

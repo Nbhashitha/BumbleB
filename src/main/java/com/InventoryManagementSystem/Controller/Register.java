@@ -1,6 +1,8 @@
 package com.InventoryManagementSystem.Controller;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.Period;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -32,8 +34,8 @@ public class Register extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		request.getRequestDispatcher("jsp/RegistrationPage.jsp").forward(request, response);
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+		//request.getRequestDispatcher("jsp/RegistrationPage.jsp").forward(request, response);
 	}
 
 	/**
@@ -51,18 +53,37 @@ public class Register extends HttpServlet {
 		String role = request.getParameter("role");
 		String password = request.getParameter("password");
 		
-		RegisterBean rg =  new RegisterBean();
-		rg.setFname(fname);
-		rg.setLname(lname);
-		rg.setNicNo(nicNo);
-		rg.setDob(dob);
-		rg.setEmail(email);
-		rg.setPassword(password);
-		rg.setRole(role);
+		//Age Calculation
+		LocalDate dobb = LocalDate.parse(request.getParameter("dob"));
 		
-		UserDB ud = new UserDB();
-		String dataCreationMessage = ud.insertUser(rg);
+		// Calculate the age
+		Period age = Period.between(dobb, LocalDate.now());
+		int years = age.getYears();
 		
-		System.out.println(dataCreationMessage);	
+		System.out.println(years);
+    	
+		System.out.println("Input date: "+dob);
+		System.out.println("Convert Date date: "+dobb);
+		System.out.println("Calculated Date date: "+years);
+		
+        if(years>=18) {
+        	RegisterBean rg =  new RegisterBean();
+    		rg.setFname(fname);
+    		rg.setLname(lname);
+    		rg.setNicNo(nicNo);
+    		rg.setDob(dob);
+    		rg.setEmail(email);
+    		rg.setPassword(password);
+    		rg.setRole(role);
+        	
+        	UserDB ud = new UserDB();
+    		String dataCreationMessage = ud.insertUser(rg);
+    		
+    		System.out.println(dataCreationMessage);
+    		response.sendRedirect("http://localhost:8080/InventoryManagementSystem/jsp/RegistrationPage.jsp");
+        } 
+        else {
+        	response.sendRedirect("http://localhost:8080/InventoryManagementSystem/jsp/RegistrationError.jsp");
+        }	
 	}
 }

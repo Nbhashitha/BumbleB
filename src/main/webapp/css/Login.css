@@ -35,6 +35,12 @@ label {
 	color: #555;
 }
 
+p{
+	margin-top: 10px;
+	font-size: 14px;
+	color: red;
+}
+
 input[type="text"], input[type="password"], input[type="email"] {
 	padding: 10px;
 	border-radius: 5px;
